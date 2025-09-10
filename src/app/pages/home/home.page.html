@@ -1,0 +1,47 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="content">
+  <ion-header [translucent]="true" class="header">
+    <div class="image-container">
+      <img [src]="enterprise.avatarUrl" alt="">
+    </div>
+    <div class="container">
+      <ion-title size="large" class="title">{{ titleEnterprise }}</ion-title>
+    </div>
+  </ion-header>
+
+  <main class="main">
+    <ion-list class="list-input">
+      <ion-item>
+        <ion-input label="Usuario" placeholder="{{ enterprise.username }}"
+          [(ngModel)]="enterprise.username"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Dirección de Entrega" placeholder="{{ enterprise.address }}"
+          [(ngModel)]="enterprise.address"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Pais y Ciudad" placeholder="{{ enterprise.country }}"
+          [(ngModel)]="enterprise.country"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Idioma" placeholder="{{ enterprise.language }}" [(ngModel)]="enterprise.language"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input label="Moneda" placeholder="{{ enterprise.currency }}" [(ngModel)]="enterprise.currency"></ion-input>
+      </ion-item>
+    </ion-list>
+  </main>
+
+  <div class="button-container">
+    <button (click)="onClick()">Imprimir</button>
+  </div>
+</ion-content>

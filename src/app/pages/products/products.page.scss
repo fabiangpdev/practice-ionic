@@ -1,0 +1,11 @@
+@media (min-width: 768px) {
+    .container-card {
+        width: 80%;
+        margin-left: 10%;
+        display: grid;
+        grid-template-columns: 120fr 120fr 120fr;
+        gap: 30px;
+    }
+
+   
+}

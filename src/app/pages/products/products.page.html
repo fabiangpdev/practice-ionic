@@ -1,0 +1,12 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Products</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container-card">
+    <app-product-card *ngFor="let product of products" [product]="product" class="grid-column" ></app-product-card>
+  </div>
+</ion-content>
+s

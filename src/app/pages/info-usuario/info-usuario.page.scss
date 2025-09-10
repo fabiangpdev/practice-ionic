@@ -1,0 +1,64 @@
+.container {
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+}
+
+.title {
+    font-size: 40px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container-image {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    border-radius: 20%;
+}
+
+.card-profile {
+     @media (min-width: 768px) {
+    
+    max-width: 550px;
+
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.letter{
+    font-size: 18px;
+    text-align: center;
+}
+
+.letter-personal-information {
+    font-size: 17px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.container-personal-information {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+
+.paragraph-personal-information {
+    text-align: center;
+}
+
+.item-ocupation {
+    @media (min-width: 768px) {
+    
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.label-ocupation {
+    text-align: center;
+}
