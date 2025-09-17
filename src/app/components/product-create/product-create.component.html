@@ -1,0 +1,32 @@
+<main class="main">
+  <ion-title class="principal-title">Create Products</ion-title>
+  <ion-list class="list-input">
+    <ion-item>
+      <ion-input label="Title:" placeholder="" [(ngModel)]="product.title"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Price:" placeholder="" [(ngModel)]="product.price"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Description:" placeholder="" [(ngModel)]="product.description"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Category:" placeholder="" [(ngModel)]="product.category"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Images:" placeholder="" [(ngModel)]="product.images[0]"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input label="Brand:" placeholder="" [(ngModel)]="product.brand"></ion-input>
+    </ion-item>
+  </ion-list>
+
+  <div class="container-button">
+    <ion-button (click)="sendInfo()">Add Product</ion-button>
+  </div>
+</main>

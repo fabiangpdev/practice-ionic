@@ -5,8 +5,14 @@
 </ion-header>
 
 <ion-content>
-  <div class="container-card">
-    <app-product-card *ngFor="let product of products" [product]="product" class="grid-column" ></app-product-card>
+  <div class="container-input-product">
+    <app-product-create (newProductEvent)="addNewProduct($event)"></app-product-create>
+  </div>
+
+  <div class="container-products">
+    <ion-title class="principal-title">Products List</ion-title>
+    <div class="container-card">
+      <app-product-card *ngFor="let product of products" [product]="product"></app-product-card>
+    </div>
   </div>
 </ion-content>
-s

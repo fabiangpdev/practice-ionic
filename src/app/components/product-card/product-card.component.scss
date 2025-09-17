@@ -6,7 +6,44 @@
 @media (min-width: 768px) {
     .container-card {
         width: 100%;
-        height: 700px;
+        max-height: 600px;
         overflow: hidden;
     }
+}
+
+img {
+    margin-top: 10px;
+}
+
+@media (min-width: 1401px) {
+    .container-card {
+        width: 100%;
+        overflow: hidden;
+        max-height: 600px;
+    }
+}
+
+@media (min-width: 2001px) {
+    .container-card {
+        width: 100%;
+        overflow: hidden;
+        max-height: 1200px;
+    }
+}
+
+.title {
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.subtitle {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.description {
+    text-align: justify;
+    overflow: hidden;
+
 }

@@ -1,3 +1,21 @@
+.container-input-product {
+    width: 80%;
+    margin-left: 10%;
+    height: 550px;
+    text-align: center;
+}
+
+.container-products {
+    display: block;
+    text-align: center;
+}
+
+.principal-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
 @media (min-width: 768px) {
     .container-card {
         width: 80%;
@@ -7,5 +25,34 @@
         gap: 30px;
     }
 
-   
+    .container-input-product {
+        width: 60%;
+        margin-left: 20%;
+        padding-bottom: 30px;
+        margin: auto;
+        margin-top: 50px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1401px) {
+    .container-input-product {
+        width: 50%;
+        margin-left: 25%;
+        padding-bottom: 30px;
+        margin: auto;
+        margin-top: 50px;
+        text-align: center;
+    }
+}
+
+@media (min-width: 2001px) {
+    .container-input-product {
+        width: 35%;
+        margin-left: 32.5%;
+        padding-bottom: 30px;
+        margin: auto;
+        margin-top: 50px;
+        text-align: center;
+    }
 }

@@ -1,6 +1,17 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { IonCard, IonCardHeader, IonCardTitle, IonCardSubtitle, IonCardContent } from '@ionic/angular/standalone';
-import { Product } from 'src/types/types';
+
+//Se declara en este lugar el type debido a que para la calificación se envía solo el componente, normalmente va en la carpeta types
+
+interface Product {
+    id:          number;
+    title:       string;
+    price:       number;
+    description: string;
+    category:    string;
+    images:      string[];
+    brand:       string;
+}
 
 @Component({
   selector: 'app-product-card',
