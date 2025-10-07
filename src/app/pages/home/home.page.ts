@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonTitle, IonList, IonItem, IonInput } from '@ionic/angular/standalone';
+import { IonContent, IonTitle, IonList, IonItem, IonInput, IonHeader } from '@ionic/angular/standalone';
 import { PageHeaderComponent } from 'src/app/components/page-header/page-header.component';
 
 type Enterprise = {
@@ -18,7 +18,7 @@ type Enterprise = {
   templateUrl: './home.page.html',
   styleUrls: ['./home.page.scss'],
   standalone: true,
-  imports: [IonContent, IonTitle, CommonModule, FormsModule, IonList, IonItem, IonInput, PageHeaderComponent]
+  imports: [IonContent, IonTitle, CommonModule, FormsModule, IonList, IonItem, IonInput, PageHeaderComponent, IonHeader]
 })
 export class HomePage {
 
