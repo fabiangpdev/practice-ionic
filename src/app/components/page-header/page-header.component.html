@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>{{ title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="openCartModal()">
+        <ion-icon name="cart"></ion-icon>
+        <ion-badge *ngIf="productService.productsCarToShop.length > 0" color="danger">
+          {{ productService.productsCarToShop.length }}
+        </ion-badge>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>

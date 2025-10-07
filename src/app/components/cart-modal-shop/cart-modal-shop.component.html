@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Carrito de Compras</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismissModal()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="cart-container">
+    <ion-list *ngIf="cartProducts.length > 0">
+      <ion-item *ngFor="let product of cartProducts" class="cart-item">
+        <ion-thumbnail slot="start">
+          <img [src]="product.images[0]" [alt]="product.title" />
+        </ion-thumbnail>
+        
+        <ion-label>
+          <h2>{{ product.title }}</h2>
+          <p>{{ product.brand }}</p>
+          <p class="price">${{ product.price | number:'1.2-2' }}</p>
+        </ion-label>
+        
+        <ion-button 
+          slot="end" 
+          fill="clear" 
+          color="danger"
+          (click)="removeFromCart(product)">
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+
+    <div *ngIf="cartProducts.length === 0" class="empty-cart">
+      <ion-icon name="cart-outline" size="large"></ion-icon>
+      <h2>Tu carrito está vacío</h2>
+      <p>Agrega algunos productos para comenzar</p>
+    </div>
+
+    <div *ngIf="cartProducts.length > 0" class="cart-summary">
+      <ion-card>
+        <ion-card-content>
+          <div class="summary-row">
+            <span>Total de productos:</span>
+            <span>{{ cartProducts.length }}</span>
+          </div>
+          <div class="summary-row total">
+            <span><strong>Total:</strong></span>
+            <span><strong>${{ getTotalPrice() | number:'1.2-2' }}</strong></span>
+          </div>
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer *ngIf="cartProducts.length > 0">
+  <ion-toolbar>
+    <div class="footer-buttons">
+      <ion-button 
+        expand="block" 
+        fill="outline" 
+        color="danger"
+        (click)="clearCart()">
+        <ion-icon name="trash" slot="start"></ion-icon>
+        Limpiar Carrito
+      </ion-button>
+      
+      <ion-button 
+        expand="block" 
+        color="primary"
+        (click)="dismissModal()">
+        <ion-icon name="checkmark" slot="start"></ion-icon>
+        Continuar Comprando
+      </ion-button>
+    </div>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,31 @@
+ion-header {
+  ion-toolbar {
+    ion-buttons {
+      margin-right: 16px; // Mueve el botón a la izquierda
+      
+      ion-button {
+        position: relative;
+        --padding-start: 12px;
+        --padding-end: 12px;
+        --padding-top: 8px;
+        --padding-bottom: 8px;
+        min-width: 48px; // Hace el botón más grande
+        min-height: 48px;
+        
+        ion-icon {
+          font-size: 24px; // Icono más grande
+        }
+        
+        ion-badge {
+          position: absolute;
+          top: -5px;
+          right: -5px;
+          min-width: 18px;
+          height: 18px;
+          font-size: 12px;
+          border-radius: 9px;
+        }
+      }
+    }
+  }
+}
