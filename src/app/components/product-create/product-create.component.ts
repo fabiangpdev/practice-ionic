@@ -2,8 +2,6 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IonList, IonItem, IonInput, IonButton, IonTitle } from '@ionic/angular/standalone';
 
-//Se declara en este lugar el type debido a que para la calificación se envía solo el componente, normalmente va en la carpeta types
-
 interface Product {
     id:          number;
     title:       string;

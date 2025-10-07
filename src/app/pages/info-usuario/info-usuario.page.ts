@@ -4,8 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { IonContent, IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonList, IonItem, IonLabel, IonNote, IonCardSubtitle } from '@ionic/angular/standalone';
 import { PageHeaderComponent } from 'src/app/components/page-header/page-header.component';
 
-//Se declara en este lugar el type debido a que para la calificación se envía solo el componente, normalmente va en la carpeta types
-
 type User = {
   nickname: string;
   firstName: string;
